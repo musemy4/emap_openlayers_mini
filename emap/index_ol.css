@@ -1,0 +1,149 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100vw;
+}
+h3 {
+  display: inline-block;
+  padding-left: 3%;
+  padding-right: 1%;
+  background-color: brown;
+  color:white;
+}
+
+button {
+  outline:0;
+  cursor: pointer;
+}
+#createBtn {
+  position: absolute;
+  z-index: 1000;
+  left: 50px;
+  top: 10px;
+  border: 0px;
+  height:30px;
+  background-color: brown;
+  font-size: 16px;
+  color: white;
+}
+
+#createBtn:hover {
+  background-color:darkturquoise;
+}
+
+#floorBtn {
+  position: absolute;
+  right: 30px;
+  top:15px;
+  z-index: 1000;
+}
+
+.floors{
+  border: 3px solid brown;
+  background-color: transparent;
+  color: brown;
+  padding: 5px;
+  margin-right:3px;
+  width:50px;
+  height: 35px;
+  font-size: 23px;
+}
+
+.floor_in{
+  background-color: brown;
+  color: white;
+}
+
+#hover {
+  position: absolute;
+  z-index: 1000;
+  left: 100px;
+  top: 10px;
+}
+
+.popup {
+  position: absolute;
+  background-color: white;
+  height:800px;
+  width: 1000px;
+  /* resize: both; 안됨*/
+  border: 1px solid brown;
+}
+
+#mapid { height: 100%; }
+#emapPop {
+  top:10px;
+  left:40px;
+  z-index: 1000;
+}
+
+#emapSettingPop {
+  top:10%;
+  left:10%;
+  z-index: 1001;
+}
+
+
+
+#emapPopTitle {
+  cursor: move;
+}
+
+#emapid {
+  height: 680px;
+  width: 1000px;
+}
+
+.exp{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.emapBtnField {
+  width:100%;
+  height:40px;
+  background-color: brown;
+  z-index:1001;
+}
+
+.emapBtn {
+  position:absolute;
+  bottom: 20px;
+  z-index: 1000;
+  border: 3px solid brown;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin-right:3px;
+  height: 35px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+#emapEditBtn {
+  left: 20px;
+}
+#emapDeleteBtn {
+  left: 130px;
+}
+
+
+
+#emapCloseBtn {
+  right: 20px;
+}
+
+#emapSettinPopCloseBtn {
+  right: 20px;
+}
+
+
+#ran {
+  border:3px solid seagreen;
+  width:100%;
+  height:85%;
+
+}

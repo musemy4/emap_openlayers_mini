@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OpenLayers</title>
+   
+  </head>
+
+  <body>
+    <button type="button" id="createBtn">Emap을 만들자</button>
+    <div id="hover"></div>
+    <!-- MAIN MAP -->
+    <div id="mapid"></div>
+    
+    <!-- EMAP pop -->
+    <div class="popup" id="emapSettingPop" style="display: none;" >
+      <h3 class="popupTitle" id="emapPoppopTitle">평면도 관리자</h3>
+      
+      <div id="ran">
+        <div></div>
+      </div>
+
+      
+      <div class="emapBtnField">
+        <button class="emapBtn" id="emapSettinPopCloseBtn" type="button">닫기</button>
+      </div>
+         
+    </div>
+
+    <div id="blackBg"></div>
+
+    <!-- EMAP -->
+    <div class="popup" id="emapPop" style="display: block;">
+
+      <h3 class="popupTitle" id="emapPopTitle">Emap name here</h3>
+      <div id="floorBtn"></div>
+
+      <div id="emapid"></div>
+      <div class="exp" style="display: none;">
+        ⚠ 등록된 emap이 없습니다
+        <button type="button" class="editFloorFile" id="editFF">평면도 등록하기</button>
+      </div>
+
+      <div class="emapBtnField">
+        <button class="emapBtn editFloorFile" id="emapEditBtn" type="button">평면도 관리자 </button>
+        <button class="emapBtn" id="emapDeleteBtn" type="button">Emap 지우기 </button>
+        <button class="emapBtn" id="emapCloseBtn" type="button">닫기</button>
+      </div>
+    </div>
+
+
+  </body>
+</html>

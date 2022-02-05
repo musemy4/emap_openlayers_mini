@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>leaflet Ver</title>
+    <meta charset="utf-8" />
+    <!-- scaling this page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+
+    <!-- ★★★ drawin LEAFLET 가장 최근버전 1.0.4 ★★★ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+
+  </head>
+<body>
+  <!-- <button type="button" id="createBtn">create Emap</button> -->
+  <div id="mapid"></div>
+  <div id="emapPop" style="display: none; ">
+    <h3 id="emapPop_title"></h3>
+    <div id="emapid"></div>
+    <button class="emapBtn" id="emapEdit" type="button">EMAP 관리 </button>
+    <button class="emapBtn" id="assetEdit" type="button">자산 관리</button>
+    <button class="emapBtn" id="emapPopClose" type="button">EMAP 닫기</button>
+  </div>
+</body>
+</html>

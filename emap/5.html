@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4.non-geographical map</title>
+    <meta charset="utf-8" />
+    <!-- scaling this page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="./us-states.js"></script>
+    <style>
+      html, body{
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100vw;
+      }
+      #mapid { height: 100%; }
+
+      .info {
+          padding: 6px 8px;
+          font: 14px/16px Arial, Helvetica, sans-serif;
+          background: white;
+          background: rgba(255,255,255,0.8);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+      }
+      
+    </style>
+  </head>
+<body>
+  <div id="mapid"></div>
+  <script>
+
+      var map = L.map('mapid', {
+          crs: L.CRS.Simple,
+          minZoom: -5
+      });
+
+      var bounds = [[0,0], [1004,1260]];
+      // var bounds = [[-26.5,-25], [1021.5,1023]];
+      var image = L.imageOverlay('uqm_map_full.png', bounds).addTo(map);
+      map.fitBounds(bounds);
+
+      var sol = [162.21, 182.9];
+      var deneb    = [43.21875, 219.406];
+
+      // var solPoint = L.latLng([162.21, 182.9]);
+      // var denebPoint = L.latLng([43.21875, 219.406]);
+      
+
+      var stars = L.layerGroup([L.marker(sol), L.marker(deneb), L.polyline([sol, deneb])]);
+
+      // var travel = L.polyline([solPoint, denebPoint]).addTo(map);
+
+      stars.addTo(map);
+      map.setView( [70, 120], 1);
+      
+      //MAP EVENT
+      function onMapClick(e) {
+        console.log(e.latlng);
+      }
+
+      map.on('click', onMapClick);
+  </script>
+</body>
+</html>
